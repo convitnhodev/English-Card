@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:practice_200lab_learn_flutter/pages/landing_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,56 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.blue
+        primarySwatch: Colors.blue
       ),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('This is my app'),
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.ac_unit)),
-      ),
-
-      body: Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              width: 80,
-              height: 80,
-              color: Colors.red,
-
-            ),
-              Container(
-                width: 80,
-                height: 80,
-                color: Colors.pink,
-              
-            ),
-              Container(
-                width: 80,
-                height: 80,
-                color: Colors.blue,
-              
-            ),
-              Container(
-                width: 80,
-                height: 80,
-                color: Colors.purple,
-              
-            )
-          ],
-        ),
-      )
-
+      home: LanddingPage(),
     );
   }
 }
