@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_200lab_learn_flutter/values/app_assets.dart';
 import 'package:practice_200lab_learn_flutter/values/app_colors.dart';
 import 'package:practice_200lab_learn_flutter/values/app_styles.dart';
 
@@ -25,33 +26,37 @@ class LanddingPage extends StatelessWidget {
               )),
                Expanded(
               child: Container(
-                color: Colors.yellow,
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Expanded(
-                      flex: 2,
-                      child: Text(
-                        'English',
-                        style: AppStyles.h2.copyWith(
-                          color: AppColors.blackGrey,
-                          fontWeight: FontWeight.bold,
-                        ),
-
+                    Text(
+                      'English',
+                      style: AppStyles.h2.copyWith(
+                        color: AppColors.blackGrey,
+                        fontWeight: FontWeight.bold
                       ),
+
                     ),
-                    Expanded(
-                      flex: 1,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
                       child: Text(
                         'Qoutes', 
-                        style: AppStyles.h4,
-                      ) ,
+                        textAlign: TextAlign.right,
+                        style: AppStyles.h4.copyWith(height: 0.5),
+                      ),
                     ),
                   ],
                 ),
               )),
                Expanded(
-              child: Container(
-                color: Colors.green,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 72),
+                child: RawMaterialButton(
+                  shape: CircleBorder(),
+                  fillColor: AppColors.lighBlue,
+                  onPressed: () {},
+                  child: Image.asset(AppAssets.rightArrow),
+                ),
               ))
           ],
         ),
