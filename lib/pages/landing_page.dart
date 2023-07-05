@@ -40,7 +40,7 @@ class LanddingPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(right: 8),
                       child: Text(
-                        'Qoutes', 
+                        'Qoutes"', 
                         textAlign: TextAlign.right,
                         style: AppStyles.h4.copyWith(height: 0.5),
                       ),
